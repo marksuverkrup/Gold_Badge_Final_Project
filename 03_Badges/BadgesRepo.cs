@@ -22,8 +22,5 @@ namespace _03_Badges
         {
             return _badgeDirectory;
         }
-
-        //public bool Update 
-
     }
 }
