@@ -10,13 +10,11 @@ namespace _03_Badges
     {
         public int BadgeID { get; set; }
         public List<string> DoorName { get; set; }
-
         public Badge() { }
         public Badge(int badgeID, List<string> doorName)
         {
             BadgeID = badgeID;
             DoorName = doorName;
         }
-
     }
 }

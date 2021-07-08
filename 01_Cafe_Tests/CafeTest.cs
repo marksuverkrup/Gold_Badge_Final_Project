@@ -13,11 +13,9 @@ namespace _01_Cafe_Tests
         {
             Menu newMenuItem = new Menu();
             MenuRepo repo = new MenuRepo();
-
             bool addResult = repo.AddItemToMenu(newMenuItem);
             Assert.IsTrue(addResult);
         }
-
         [TestMethod]
         public void GetFullMenu_ShouldReturnCorrectCollection()
         {
@@ -30,14 +28,12 @@ namespace _01_Cafe_Tests
         }
         private Menu _content;
         private MenuRepo _repo;
-
         [TestInitialize]
         public void Arrange()
         {
             _repo = new MenuRepo();
             _content = new Menu(1, "Big Mac", "over 14 billion sold", "hamburger, onion, lettuce, pickle, tomato", 3.95);
             _repo.AddItemToMenu(_content);
-
         }
 
         [TestMethod]

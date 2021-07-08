@@ -10,13 +10,11 @@ namespace _03_BadgesUI
     public class ProgramUI
     {
         protected readonly BadgeRepo _badgeRepo = new BadgeRepo();
-
         public void Run()
         {
             SeedBadges();
             DisplayMenu();
         }
-
         public void DisplayMenu()
         {
             bool isRunning = true;
@@ -29,9 +27,7 @@ namespace _03_BadgesUI
                     "2. Edit a badge  \n" +
                     "3. List all badges \n" +
                     "4. Exit \n");
-
                 string userInput = Console.ReadLine();
-
                 switch (userInput)
                 {
                     case "1":
@@ -58,23 +54,19 @@ namespace _03_BadgesUI
             Console.Clear();
             Console.WriteLine("What is the number on the badge:");
             int badgeID = int.Parse(Console.ReadLine());
-
             List<string> doorNames = new List<string>();
             Console.WriteLine("List a door that it needs access to:");
             string doorNameOne = Console.ReadLine();
             doorNames.Add(doorNameOne);
             Console.WriteLine("Any other doors(y/n)?");
             string anotherDoor = Console.ReadLine();
-
             if (anotherDoor == "y")
             {
                 Console.WriteLine("List a door that it needs access to:");
                 string doorNameTwo = Console.ReadLine();
                 doorNames.Add(doorNameTwo);
-
                 Console.WriteLine("Any other doors(y/n)?");
                 string anotherDoorTwo = Console.ReadLine();
-
                 if (anotherDoorTwo == "y")
                 {
                     Console.WriteLine("List a door that it needs access to:");
@@ -89,7 +81,6 @@ namespace _03_BadgesUI
         {
             Console.Clear();
             Dictionary<int, Badge> dictOfBadges = _badgeRepo.GetBadges();
-
             Console.WriteLine("{0,-6} {1,-20}\n", "Badge#", "Door Access");
             foreach (var badge in dictOfBadges)
             {
@@ -104,15 +95,12 @@ namespace _03_BadgesUI
             }
             PressKey();
         }
-
         public void UpdateBadge()
         {
             Console.Clear();
             Console.WriteLine("What is the badge number you would like to update?");
             int targetBadge = int.Parse(Console.ReadLine());
-
             Dictionary<int, Badge> dictOfBadges = _badgeRepo.GetBadges();
-
             foreach (var badge in dictOfBadges)
             {
                 if (badge.Key == targetBadge)
@@ -127,9 +115,7 @@ namespace _03_BadgesUI
                     Console.WriteLine("\n What would you like to do?\n" +
                     "1. Remove a door \n" +
                     "2. Add a door  \n");
-
                     string userInput = Console.ReadLine();
-
                     switch (userInput)
                     {
                         case "1":
@@ -152,19 +138,16 @@ namespace _03_BadgesUI
             }
             PressKey();
         }
-
         public void PressKey()
         {
             Console.WriteLine("Press Enter to Continue.");
             Console.ReadKey();
         }
-
         public void SeedBadges()
         {
             Badge firstBadge = new Badge(4688, new List<string> { "A4", "A7" });
             Badge secondBadge = new Badge(4652, new List<string> { "A1", "A3" });
             Badge thirdBadge = new Badge(4649, new List<string> { "A2", "A6" });
-
             _badgeRepo.AddBadge(firstBadge);
             _badgeRepo.AddBadge(secondBadge);
             _badgeRepo.AddBadge(thirdBadge);

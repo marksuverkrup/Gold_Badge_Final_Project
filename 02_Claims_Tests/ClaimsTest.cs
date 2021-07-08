@@ -13,7 +13,6 @@ namespace _02_Claims_Tests
         {
             Claim newClaim = new Claim();
             ClaimRepo repo = new ClaimRepo();
-
             bool addResult = repo.AddClaim(newClaim);
             Assert.IsTrue(addResult);
         }
@@ -30,7 +29,6 @@ namespace _02_Claims_Tests
         }
         private Claim _content;
         private ClaimRepo _repo;
-        
         [TestInitialize]
         public void Arrange()
         {
@@ -39,7 +37,6 @@ namespace _02_Claims_Tests
             _repo.AddClaim(_content);
 
         }
-        
         [TestMethod]
         public void RemoveAClaim_ShouldReturnTrue()
         {
@@ -47,7 +44,5 @@ namespace _02_Claims_Tests
             bool removeClaim = _repo.RemoveClaim(foundClaim);
             Assert.IsTrue(removeClaim);
         }
-
-
     }
 }

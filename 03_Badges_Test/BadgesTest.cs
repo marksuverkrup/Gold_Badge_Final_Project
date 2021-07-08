@@ -14,7 +14,6 @@ namespace _03_Badges_Test
         {
             Badge newBadge = new Badge();
             BadgeRepo repo = new BadgeRepo();
-
             bool addResult = repo.AddBadge(newBadge);
             Assert.IsTrue(addResult);
         }
