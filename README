@@ -1,1 +1,19 @@
-Contained in this solution are three projects, Menu, Claims, and Badges
+Contained in this solution are three projects: Menu, Claims, and Badges
+
+The Komodo Cafe introduces a new menu to the restaurant, giving the ability to create menu options,
+delete these items off of the menu, and view a list of the entire menu, all through a simple,
+easy to use console app.
+
+The Komodo Claims Department takes things to a more serious level, dealing with accidents and claims.  
+This console app will not only be able to view and add claims, but is also given the functionality of 
+taking care of claims once they have been dealt with.  Truly an innovation for the insuracne community.
+
+Last but certainly not least is the Komodo Insurace badging system.  Using some of the most difficult
+methods known to the coding world at this time, this program elequently utilizes dictionaries in order to 
+give and take permissions from employee badges.  This will allow only certain individuals to access
+doors at the Komodo Insurance buildings, protecting the people, and improving their daily lives.
+
+
+These three projects have been a culmination of the work done thus far in the Eleven Fifty Accademy.
+I think I speak for all of us when I say it has been a pleasure designing these programs, 
+and the partners over here at Dewee, Cheatum, and Howe look forward to working with you in the future.
